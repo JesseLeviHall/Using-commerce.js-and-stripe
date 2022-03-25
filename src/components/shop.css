@@ -1,0 +1,23 @@
+
+
+#title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-text);
+}
+
+#description {
+  font-family: var(--font-family);
+}
+
+#cardbody {
+  background-color: linear-gradient(103.22deg, #8b55c5 -13.86%, #F49867 99.55%);
+}
+
+
+#renCard {
+  color: var(--color-text);
+  background-color: linear-gradient(103.22deg, #8b55c5 -13.86%, #F49867 99.55%);
+}
