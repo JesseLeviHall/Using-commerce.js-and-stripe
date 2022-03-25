@@ -40,7 +40,7 @@ const PaymentForm = ({
           name: "Primary",
           street: addressData.data.address,
           town_city: addressData.data.city,
-          county_state: addressData.data.state,
+          county_state: addressData.data.state.value,
           postal_zip_code: addressData.data.zipcode,
           country: "US",
         },

@@ -1,10 +1,11 @@
 import React from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { Form, Button } from "reactstrap";
-
+import StateSelectField from "./StateSelectField";
 import CustomFormInput from "./CustomTextField";
+import image from "../../assets/stripe.png";
 
-const AddressForm = ({ checkoutToken, next }) => {
+const AddressForm = ({ next }) => {
   const methods = useForm();
 
   return (
@@ -43,14 +44,13 @@ const AddressForm = ({ checkoutToken, next }) => {
                 label="city"
                 whatItIs="City"
               />
-              <CustomFormInput
+              <StateSelectField
                 name="state"
                 placeholder="State"
                 label="state"
                 whatItIs="State"
               />
               <CustomFormInput
-                required
                 name="zipcode"
                 placeholder="Zip Code"
                 label="zipcode"
@@ -62,7 +62,6 @@ const AddressForm = ({ checkoutToken, next }) => {
                 label="email"
                 whatItIs="Email"
               />
-
               <Button
                 type="submit"
                 size="md"
@@ -88,6 +87,7 @@ const AddressForm = ({ checkoutToken, next }) => {
           <p className="ms-5 mt-3">
             Secure Checkout is provided by Stripe. Your information is not
             stored or shared in anyway.
+            <img src={image} height="200" className="mt-2" />
           </p>
         </div>
       </div>

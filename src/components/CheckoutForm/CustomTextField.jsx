@@ -2,7 +2,7 @@ import React from "react";
 import { useFormContext, Controller } from "react-hook-form";
 import { FormGroup, Input, Col } from "reactstrap";
 
-function CustomFormInput({ name, label, whatItIs, placeholder, required }) {
+function CustomFormInput({ name, label, whatItIs, placeholder }) {
   const { control } = useFormContext();
 
   return (
