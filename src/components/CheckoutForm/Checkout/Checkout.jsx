@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardTitle, CardBody } from "reactstrap";
+import { Card, CardTitle, CardBody, Button, Spinner } from "reactstrap";
 import AddressForm from "../AddressForm";
 import PaymentForm from "../PaymentForm";
+import { Link } from "react-router-dom";
 import { commerce } from "../../../lib/commerce";
 
 const formTitles = ["Shipping / Billing Address", "Payment Details"];
@@ -21,7 +22,9 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         });
         console.log(token);
         setCheckoutToken(token);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
     };
     generateToken();
   }, [cart]);
@@ -45,13 +48,32 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
     console.log(data);
   };
 
-  const Confirmation = () => {
-    return (
+  let Confirmation = () =>
+    order.customer ? (
       <div>
-        <h1>Confirmation Page</h1>
+        <h5>Thank you very much {order.customer.firstname}!</h5>
+        <hr />
+        <p>Order reference: {order.customer_reference} </p>
+        <Button
+          component={Link}
+          to="./Shop"
+          size="md"
+          className="col-5 mt-5 text-nowrap "
+          color="primary">
+          Done
+        </Button>
+      </div>
+    ) : (
+      <div className="ms-5">
+        <Spinner></Spinner>
       </div>
     );
-  };
+
+  if (error) {
+    <div>
+      <h5>Error: {error}</h5>
+    </div>;
+  }
 
   return (
     <div className="container">

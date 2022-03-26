@@ -8,6 +8,7 @@ function CustomFormInput({ name, label, whatItIs, placeholder }) {
   return (
     <FormGroup>
       <Controller
+        defaultValue=""
         name={name}
         label={label}
         required

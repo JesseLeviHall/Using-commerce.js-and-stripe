@@ -72,6 +72,7 @@ function StateSelectField({ name, label, whatItIs, placeholder }) {
   return (
     <FormGroup>
       <Controller
+        defaultValue=""
         label={label}
         name={name}
         required
