@@ -69,7 +69,9 @@ function Navs({ totalItems }) {
                 <NavLink className="nav-link" to="./Cart">
                   Cart
                   <CgShoppingCart />
-                  <Badge bg="secondary">{totalItems}</Badge>
+                  <Badge color="dark" pill>
+                    {totalItems}
+                  </Badge>
                 </NavLink>
               </NavItem>
               <NavItem className="sm m-5">

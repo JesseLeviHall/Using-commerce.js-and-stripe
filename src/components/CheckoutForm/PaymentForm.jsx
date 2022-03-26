@@ -5,6 +5,9 @@ import {
   Elements,
   ElementsConsumer,
   CardElement,
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
@@ -61,18 +64,19 @@ const PaymentForm = ({
     <div className="row">
       <Review checkoutToken={checkoutToken} />
       <hr />
-      <p>Payment Method</p>
+      <h3 className="ms-3 mb-5">Payment Method</h3>
       <Elements stripe={stripePromise}>
         <ElementsConsumer>
           {({ elements, stripe }) => (
             <form onSubmit={(e) => handleSubmit(e, elements, stripe)}>
-              <CardElement />
+              <CardNumberElement className=" bg-light col-sm-4 mb-4 offset-sm-3 mr-3" />
+              <CardExpiryElement className=" bg-light col-sm-4 mb-4 offset-sm-3 mr-3" />
+              <CardCvcElement className=" bg-light col-sm-4 offset-sm-3 mr-3" />
               <br /> <br />
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <Button
                   type="submit"
-                  size="sm"
-                  className="ms-4 col-2 text-nowrap"
+                  className="col-sm-4 offset-sm-3 text no-wrap mr-3"
                   color="primary"
                   disabled={!stripe}>
                   Pay {checkoutToken.live.total_with_tax.formatted_with_symbol}
