@@ -1,14 +1,7 @@
 import React from "react";
 import Review from "./Review";
-import { Button } from "reactstrap";
-import {
-  Elements,
-  ElementsConsumer,
-  CardElement,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCvcElement,
-} from "@stripe/react-stripe-js";
+import { Button, Form } from "reactstrap";
+import { Elements, CardElement } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
@@ -66,25 +59,19 @@ const PaymentForm = ({
       <hr />
       <h3 className="ms-3 mb-5">Payment Method</h3>
       <Elements stripe={stripePromise}>
-        <ElementsConsumer>
-          {({ elements, stripe }) => (
-            <form onSubmit={(e) => handleSubmit(e, elements, stripe)}>
-              <CardNumberElement className=" bg-light col-sm-4 mb-4 offset-sm-3 mr-3" />
-              <CardExpiryElement className=" bg-light col-sm-4 mb-4 offset-sm-3 mr-3" />
-              <CardCvcElement className=" bg-light col-sm-4 offset-sm-3 mr-3" />
-              <br /> <br />
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button
-                  type="submit"
-                  className="col-sm-4 offset-sm-3 text no-wrap mr-3"
-                  color="primary"
-                  disabled={!stripe}>
-                  Pay {checkoutToken.live.total_with_tax.formatted_with_symbol}
-                </Button>
-              </div>
-            </form>
-          )}
-        </ElementsConsumer>
+        <Form>
+          <CardElement className=" bg-light mb-5 col-sm-4 ms-sm-3 mr-3">
+            {({ elements, stripe }) => (
+              <form onSubmit={(e) => handleSubmit(e, elements, stripe)}></form>
+            )}
+          </CardElement>
+          <Button
+            type="submit"
+            className="col-sm-4 mb-5 ms-sm-3 text no-wrap mr-3"
+            color="primary">
+            Pay {checkoutToken.live.total_with_tax.formatted_with_symbol}
+          </Button>
+        </Form>
       </Elements>
       <hr />
       <Button

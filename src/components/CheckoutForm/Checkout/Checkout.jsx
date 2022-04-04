@@ -45,7 +45,6 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   const next = (data) => {
     setAddressData(data);
     nextStep();
-    console.log(data);
   };
 
   let Confirmation = () =>
