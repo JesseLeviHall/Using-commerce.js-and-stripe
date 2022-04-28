@@ -5,6 +5,8 @@ import PaymentForm from "../PaymentForm";
 import { Link } from "react-router-dom";
 import { commerce } from "../../../lib/commerce";
 
+//link and use history from react router dom
+
 const formTitles = ["Shipping / Billing Address", "Payment Details"];
 
 const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
@@ -91,3 +93,5 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   );
 };
 export default Checkout;
+
+//active step is messing up the confirmation part maybe, just use it.

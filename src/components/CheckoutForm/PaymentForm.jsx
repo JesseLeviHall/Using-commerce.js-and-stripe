@@ -53,6 +53,9 @@ const PaymentForm = ({
     }
   };
 
+  //there is a card element and card element consumer discrepancy here
+  //discrepancey with the form tags
+
   return (
     <div className="row">
       <Review checkoutToken={checkoutToken} />
