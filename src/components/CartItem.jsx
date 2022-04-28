@@ -9,7 +9,18 @@ const CartItem = ({ item, onRemoveFromCart }) => {
     <div>
       <dl className="row">
         <>
-          <dt className="col-6 ms-4 my-4"> {item.name}</dt>
+          <dt className="col-6 ms-4 my-2">
+            {" "}
+            {item.name}
+            <span>
+              <img
+                src={item.image.url}
+                alt={"img"}
+                height="60"
+                width="60"
+                className="offset-1"></img>
+            </span>
+          </dt>
           <dd className="col-4 ms-5 my-4">
             {item.price.formatted_with_symbol}
             <Button

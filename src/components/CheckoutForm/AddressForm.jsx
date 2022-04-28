@@ -88,12 +88,14 @@ const AddressForm = ({ next }) => {
             Secure Checkout is provided by Stripe. Your information is not
             stored or shared in anyway.
           </p>
-          <img
-            src={image}
-            height="200"
-            className="mt-2 ms-lg-5"
-            style={{ justifyContent: "center" }}
-          />
+          <div className="row">
+            <img
+              src={image}
+              width="200"
+              className="mt-2 ms-lg-3"
+              style={{ justifyContent: "center" }}
+            />{" "}
+          </div>
         </div>
       </div>
     </div>

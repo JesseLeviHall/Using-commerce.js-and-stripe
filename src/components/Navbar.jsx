@@ -37,7 +37,7 @@ function Navs({ totalItems }) {
         </div>
       </Jumbotron>
 
-      <Navbar dark expand="md">
+      <Navbar sticky="top" dark expand="md">
         <div className="container">
           <NavbarBrand className="mr-auto" href="/Shop">
             <video
