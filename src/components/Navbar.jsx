@@ -55,17 +55,17 @@ function Navs({ totalItems }) {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav navbar>
-              <NavItem className="sm m-5">
+              <NavItem onClick={toggle} className="sm m-5">
                 <NavLink className="nav-link" to="./Landing">
                   Welcome
                 </NavLink>
               </NavItem>
-              <NavItem className="sm m-5">
+              <NavItem onClick={toggle} className="sm m-5">
                 <NavLink className="nav-link" to="./Shop">
                   Shop
                 </NavLink>
               </NavItem>
-              <NavItem className="text-nowrap sm m-5">
+              <NavItem onClick={toggle} className="text-nowrap sm m-5">
                 <NavLink className="nav-link" to="./Cart">
                   Cart
                   <CgShoppingCart />
@@ -74,7 +74,7 @@ function Navs({ totalItems }) {
                   </Badge>
                 </NavLink>
               </NavItem>
-              <NavItem className="sm m-5">
+              <NavItem onClick={toggle} className="sm m-5">
                 <NavLink className="nav-link" to="/Checkout">
                   Checkout
                 </NavLink>

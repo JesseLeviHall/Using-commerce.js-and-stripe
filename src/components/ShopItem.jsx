@@ -10,8 +10,6 @@ import {
 import "./shop.css";
 
 const ShopItem = ({ product, onAddToCart }) => {
-  console.log(product);
-
   return (
     <div className="container">
       <div className="row">
@@ -25,14 +23,15 @@ const ShopItem = ({ product, onAddToCart }) => {
                 id="title">
                 {product.name}
               </CardTitle>{" "}
+              {"In-stock: "} {product.inventory.available}
               <hr />
               <CardText className="gradient__text" id="description">
-                Current stock: {product.inventory.available} Available <br />
+                <br />
                 <span
                   dangerouslySetInnerHTML={{
                     __html: product.description,
                   }}></span>{" "}
-                {product.price.formatted_with_symbol}
+                {product.price.formatted_with_symbol},
               </CardText>
               <Button
                 color="primary"

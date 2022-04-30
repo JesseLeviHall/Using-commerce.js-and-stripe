@@ -80,15 +80,13 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
     );
 
   if (error) {
-    Confirmation = () => {
-      <div>
-        <h5 className="ms-5">Error: {error}</h5>
-        <br /> <br />
-        <Button className="ms-5" component={Link} type="button" to="/">
-          Return
-        </Button>
-      </div>;
-    };
+    <div>
+      <h5 className="ms-5">Error: {error}</h5>
+      <br /> <br />
+      <Button className="ms-5" component={Link} type="button" to="/">
+        Return
+      </Button>
+    </div>;
   }
 
   return (
@@ -113,3 +111,5 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   );
 };
 export default Checkout;
+
+//still cannot get confirmation page, and confirmation email.

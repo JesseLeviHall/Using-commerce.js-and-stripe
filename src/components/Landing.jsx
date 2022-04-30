@@ -26,7 +26,7 @@ const Landing = () => (
     </div>
 
     <div className="header-image">
-      <img src={home} />
+      <img className="header-image img " src={home} />
     </div>
   </div>
 );
