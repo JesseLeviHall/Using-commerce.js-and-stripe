@@ -24,13 +24,18 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
           });
           setCheckoutToken(token);
         } catch {
-          if (activeStep !== StepDisplay.length) history.push("/");
+          if (activeStep !== formTitles.length) history.push("/");
           console.log(error);
         }
       };
       generateToken();
     }
   }, [cart]);
+
+  const next = (data) => {
+    setAddressData(data);
+    nextStep();
+  };
 
   const StepDisplay = () =>
     activeStep === 0 ? (
@@ -44,11 +49,6 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         onCaptureCheckout={onCaptureCheckout}
       />
     );
-
-  const next = (data) => {
-    setAddressData(data);
-    nextStep();
-  };
 
   let Confirmation = () =>
     order.customer ? (
@@ -66,23 +66,29 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         </Button>
       </div>
     ) : (
-      <div className="ms-5">
+      <div className="row">
         <Spinner
-          style={{ width: "6rem", height: "6rem", justifyContent: "center" }}
-          children={false}
+          offset="5"
+          style={{
+            width: "6rem",
+            height: "6rem",
+            marginLeft: "10rem",
+          }}
+          children={""}
         />
       </div>
     );
 
   if (error) {
-    Confirmation = () => (
+    Confirmation = () => {
       <div>
-        <h5>Error: {error}</h5>
-        <Button component={Link} type="button" to="/">
+        <h5 className="ms-5">Error: {error}</h5>
+        <br /> <br />
+        <Button className="ms-5" component={Link} type="button" to="/">
           Return
         </Button>
-      </div>
-    );
+      </div>;
+    };
   }
 
   return (
@@ -93,12 +99,13 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
             <CardTitle className="m-4">
               <h1>{formTitles[activeStep]}</h1>
             </CardTitle>
-            <CardBody>{StepDisplay()}</CardBody>
-            {activeStep === formTitles.length ? (
-              <Confirmation />
-            ) : (
-              checkoutToken && <StepDisplay />
-            )}
+            <CardBody>
+              {activeStep === formTitles.length ? (
+                <Confirmation />
+              ) : (
+                checkoutToken && <StepDisplay />
+              )}
+            </CardBody>
           </Card>
         </div>
       </div>

@@ -14,7 +14,7 @@ function Shop({ product, onAddToCart }) {
         }}>
         <Spinner
           style={{ width: "6rem", height: "6rem", justifyContent: "center" }}
-          children={false}
+          children={"false"}
         />
       </div>
     );

@@ -10,6 +10,8 @@ import {
 import "./shop.css";
 
 const ShopItem = ({ product, onAddToCart }) => {
+  console.log(product);
+
   return (
     <div className="container">
       <div className="row">
@@ -25,6 +27,7 @@ const ShopItem = ({ product, onAddToCart }) => {
               </CardTitle>{" "}
               <hr />
               <CardText className="gradient__text" id="description">
+                Current stock: {product.inventory.available} Available <br />
                 <span
                   dangerouslySetInnerHTML={{
                     __html: product.description,
