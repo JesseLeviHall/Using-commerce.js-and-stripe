@@ -25,7 +25,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
           setCheckoutToken(token);
         } catch {
           if (activeStep !== formTitles.length) history.push("/");
-          console.log(error);
+          console.log(error.message);
         }
       };
       generateToken();
@@ -50,15 +50,26 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
       />
     );
 
+  //prettier-ignore
+
   let Confirmation = () =>
     order.customer ? (
       <div>
         <h5>Thank you very much {order.customer.firstname}!</h5>
         <hr />
         <p>Order reference: {order.customer_reference} </p>
+        <br />
+        <p>
+          There will be an email reciept for you shortly. <br /> Shipping
+          confirmation will also be emailed as soon as {order.line_items} is
+          sent. <br />
+          <br />
+          Have good rest of your day!{" "}
+        </p>
         <Button
           component={Link}
-          to="./Shop"
+          type="button"
+          to="/"
           size="md"
           className="col-5 mt-5 text-nowrap "
           color="primary">
@@ -72,7 +83,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
           style={{
             width: "6rem",
             height: "6rem",
-            marginLeft: "10rem",
+            marginLeft: "15rem",
           }}
           children={""}
         />
@@ -111,5 +122,3 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   );
 };
 export default Checkout;
-
-//still cannot get confirmation page, and confirmation email.

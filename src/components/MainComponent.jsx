@@ -61,7 +61,6 @@ function MainComponent() {
         checkoutTokenId,
         newOrder
       );
-
       setOrder(incomingOrder);
     } catch (error) {
       setErrorMessage(error.data.error.message);
@@ -93,6 +92,7 @@ function MainComponent() {
             <Checkout
               cart={cart}
               order={order}
+              onDone={refreshCart}
               onCaptureCheckout={handleCaptureCheckout}
               error={errorMessage}
             />

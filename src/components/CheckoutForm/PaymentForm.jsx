@@ -9,6 +9,9 @@ import {
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+const appearance = {
+  theme: "stripe",
+};
 
 const PaymentForm = ({
   nextStep,
@@ -20,7 +23,7 @@ const PaymentForm = ({
   const handleSubmit = async (event, elements, stripe) => {
     event.preventDefault();
     if (!stripe || !elements) return;
-    const cardElement = elements.getElement(CardElement);
+    const cardElement = elements.getElement(CardElement, appearance);
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card: cardElement,
