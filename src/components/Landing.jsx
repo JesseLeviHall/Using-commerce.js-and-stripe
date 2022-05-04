@@ -6,7 +6,9 @@ import home from "../assets/home.PNG";
 const Landing = () => (
   <div className="header section__padding">
     <div className="header-content">
-      <h1 className="gradient__text">Welcome to CRF-Art Online Shop! </h1>
+      <h1 className="gradient__text">
+        Welcome to the Fired by Ferrari online shop!{" "}
+      </h1>
       <h2 className="gradient__text">
         Enter to browse unique ceramic items unlike anything else out there.
       </h2>

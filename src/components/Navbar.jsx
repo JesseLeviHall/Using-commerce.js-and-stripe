@@ -27,10 +27,10 @@ function Navs({ totalItems }) {
             <div className="col">
               <h1 className="gradient__text ms-4" style={{ marginTop: "2rem" }}>
                 {" "}
-                CRF-Art
+                Fired by Ferrari
               </h1>
               <h2 className="gradient__text ms-4">
-                Awesome Ceramics For Unique Life-Styles
+                Distinctive Ceramics For Fascinating People
               </h2>
             </div>
           </div>
