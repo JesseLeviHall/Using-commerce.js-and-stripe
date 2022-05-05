@@ -8,6 +8,7 @@ import Navs from "./Navbar";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { commerce } from "../lib/commerce";
 import Terms from "./Terms";
+import Thankyou from "./CheckoutForm/Thankyou";
 import About from "./About";
 
 function MainComponent() {
@@ -65,7 +66,6 @@ function MainComponent() {
     } catch (error) {
       setErrorMessage(error.data.error.message);
     }
-    refreshCart();
   };
 
   useEffect(() => {
@@ -92,7 +92,6 @@ function MainComponent() {
             <Checkout
               cart={cart}
               order={order}
-              onDone={refreshCart}
               onCaptureCheckout={handleCaptureCheckout}
               error={errorMessage}
             />
@@ -108,6 +107,11 @@ function MainComponent() {
               onEmptyCart={handleEmptyCart}
             />
           )}
+        />
+        <Route
+          exact
+          path="/Thankyou"
+          component={() => <Thankyou order={order} onDone={refreshCart} />}
         />
         <Route exact path="/Terms" component={Terms} />
         <Route exact path="/About" component={About} />
