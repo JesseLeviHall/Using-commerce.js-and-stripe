@@ -18,6 +18,19 @@ import "./Shop";
 function Navs({ totalItems }) {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const Showcheckout = () => {
+    if (totalItems >= 1) {
+      return (
+        <NavItem onClick={toggle} className="sm m-5">
+          <NavLink className="nav-link" to="/Checkout">
+            Checkout
+          </NavLink>
+        </NavItem>
+      );
+    } else {
+      return <div />;
+    }
+  };
 
   return (
     <React.Fragment>
@@ -74,11 +87,7 @@ function Navs({ totalItems }) {
                   </Badge>
                 </NavLink>
               </NavItem>
-              <NavItem onClick={toggle} className="sm m-5">
-                <NavLink className="nav-link" to="/Checkout">
-                  Checkout
-                </NavLink>
-              </NavItem>
+              <Showcheckout />
             </Nav>
           </Collapse>
         </div>

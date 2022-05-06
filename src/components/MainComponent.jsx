@@ -75,7 +75,7 @@ function MainComponent() {
 
   return (
     <div>
-      <Navs totalItems={cart.total_unique_items} />
+      <Navs totalItems={cart.total_unique_items} cart={cart} />
       <Switch>
         <Route exact path="/Landing" component={Landing} />
         <Route
