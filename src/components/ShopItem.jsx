@@ -33,12 +33,16 @@ const ShopItem = ({ product, onAddToCart }) => {
                   }}></span>{" "}
                 {product.price.formatted_with_symbol},
               </CardText>
-              <Button
-                color="primary"
-                style={{ marginTop: "1rem" }}
-                onClick={() => onAddToCart(product.id, 1)}>
-                Add To Cart
-              </Button>
+              {product.inventory.available >= 1 ? (
+                <Button
+                  color="primary"
+                  style={{ marginTop: "1rem" }}
+                  onClick={() => onAddToCart(product.id, 1)}>
+                  Add To Cart
+                </Button>
+              ) : (
+                <p className="gradient__text">(This one sold)</p>
+              )}
             </CardBody>
           </Card>
         ))}
