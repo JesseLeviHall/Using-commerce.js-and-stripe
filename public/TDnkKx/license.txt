@@ -1,0 +1,11 @@
+Model Information:
+* title:	Advanced Game Characters - Week 2 Jacket
+* source:	https://sketchfab.com/3d-models/advanced-game-characters-week-2-jacket-8f211f057bb24f5db17ca659553b716b
+* author:	Juan Martinez Sanjurjo (https://sketchfab.com/JuanSanjurjo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Advanced Game Characters - Week 2 Jacket" (https://sketchfab.com/3d-models/advanced-game-characters-week-2-jacket-8f211f057bb24f5db17ca659553b716b) by Juan Martinez Sanjurjo (https://sketchfab.com/JuanSanjurjo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

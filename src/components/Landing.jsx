@@ -1,7 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./landing.css";
 import { NavLink } from "react-router-dom";
-import home from "../assets/home.PNG";
+import { Canvas } from "@react-three/fiber";
+import Model from "./Scene";
+import Animation from "./Animation";
+import Controls from "./Controls";
 
 const Landing = () => (
   <div className="header section__padding">
@@ -28,7 +31,7 @@ const Landing = () => (
     </div>
 
     <div className="header-image">
-      <img className="header-image img " src={home} />
+      <Animation className="header-image img" />
     </div>
   </div>
 );
