@@ -20,7 +20,7 @@ function Animation(props) {
       <pointLight intensity={1} position={[-10, -25, -10]} />
       <spotLight
         castShadow
-        intensity={8}
+        intensity={0.5}
         angle={Math.PI / 8}
         position={[25, 25, 15]}
         shadow-mapSize-width={2048}
@@ -28,7 +28,7 @@ function Animation(props) {
       />
 
       <Suspense fallback={null}>
-        <Model position={[0, -1, 0]} rotation={[Math.PI / 0.5, 0, 0]} />
+        <Model position={[0, -0.25, 0]} rotation={[Math.PI / 0.5, 0, 0]} />
       </Suspense>
     </Canvas>
   );

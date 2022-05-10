@@ -1,10 +1,7 @@
-import React, { Suspense } from "react";
+import React from "react";
 import "./landing.css";
 import { NavLink } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import Model from "./Scene";
 import Animation from "./Animation";
-import Controls from "./Controls";
 
 const Landing = () => (
   <div className="header section__padding">
@@ -30,8 +27,8 @@ const Landing = () => (
       </div>
     </div>
 
-    <div className="header-image">
-      <Animation className="header-image img" />
+    <div className="header-image row">
+      <Animation className="header-image img col-sm-12 md-12" />
     </div>
   </div>
 );

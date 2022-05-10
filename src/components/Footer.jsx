@@ -28,9 +28,6 @@ const Footer = () => {
           <p>
             <Link to={"./Cart"}>Cart</Link>
           </p>
-          <p>
-            <Link to={"/Checkout"}>Checkout</Link>
-          </p>
         </div>
         <div className="footer-links_div">
           <h4>Information</h4>

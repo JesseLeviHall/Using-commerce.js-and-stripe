@@ -5,3 +5,7 @@ jumbotron h2 {
 .container {
   background-color: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
 }
+
+video {
+  pointer-events: none;
+}

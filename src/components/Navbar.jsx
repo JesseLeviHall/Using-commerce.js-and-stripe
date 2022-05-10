@@ -80,8 +80,8 @@ function Navs({ totalItems }) {
               </NavItem>
               <NavItem onClick={toggle} className="text-nowrap sm m-5">
                 <NavLink className="nav-link" to="./Cart">
+                  <CgShoppingCart className="m-1" />
                   Cart
-                  <CgShoppingCart />
                   <Badge color="dark" pill>
                     {totalItems}
                   </Badge>
