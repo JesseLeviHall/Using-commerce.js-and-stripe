@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  Row,
+  Col,
   Card,
   CardImg,
   CardText,
@@ -19,11 +21,22 @@ const ShopItem = ({ product, onAddToCart }) => {
             <CardBody>
               <CardTitle
                 style={{ fontWeight: "bold" }}
-                className="gradient__text"
+                className="gradient__text mb-3"
                 id="title">
                 {product.name}
               </CardTitle>{" "}
-              {"In-stock: "} {product.inventory.available}
+              <Row className="ms-1 align-items-center">
+                {"In-stock: "} {product.inventory.available}
+                <Col className="offset-1" xs="auto">
+                  <Button
+                    outline
+                    color="primary"
+                    className="text-nowrap"
+                    size="sm">
+                    View
+                  </Button>
+                </Col>
+              </Row>
               <hr />
               <CardText className="gradient__text" id="description">
                 <br />
