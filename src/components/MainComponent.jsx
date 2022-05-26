@@ -10,6 +10,7 @@ import { commerce } from "../lib/commerce";
 import Terms from "./Terms";
 import Thankyou from "./CheckoutForm/Thankyou";
 import About from "./About";
+import { Toast, ToastBody } from "reactstrap";
 
 function MainComponent() {
   const [products, setProducts] = useState([]);
@@ -34,9 +35,9 @@ function MainComponent() {
     if (!alreadyIn) {
       const { cart } = await commerce.cart.add(productId, quantity);
       setCart(cart);
-      alert("Added!");
+      alert("added to cart!");
     } else {
-      alert("That one is already added");
+      alert("That one is already in the Cart. Ready to Checkout?");
       return;
     }
   };

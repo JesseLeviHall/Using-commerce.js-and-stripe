@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  Modal,
+  ModalBody,
   Row,
   Col,
   Card,
@@ -9,9 +11,16 @@ import {
   CardTitle,
   Button,
 } from "reactstrap";
+import { Carousel } from "./Carousel";
 import "./shop.css";
 
 const ShopItem = ({ product, onAddToCart }) => {
+  // Modal open state
+  const [modal, setModal] = React.useState(false);
+
+  // Toggle for Modal
+  const toggle = () => setModal(!modal);
+
   return (
     <div className="container">
       <div className="row">
@@ -27,15 +36,26 @@ const ShopItem = ({ product, onAddToCart }) => {
               </CardTitle>{" "}
               <Row className="ms-1 align-items-center">
                 {"In-stock: "} {product.inventory.available}
-                <Col className="offset-1" xs="auto">
+                {/* <Col className="offset-1" xs="auto">
                   <Button
+                    onClick={toggle}
                     outline
                     color="primary"
                     className="text-nowrap"
                     size="sm">
                     View
                   </Button>
-                </Col>
+                  <Modal
+                    className="gradient__text"
+                    isOpen={modal}
+                    toggle={toggle}
+                    modalTransition={{ timeout: 1000 }}>
+                    <ModalBody>
+                      <Carousel product={product} add={onAddToCart} />
+                      Simple Modal with just ModalBody...
+                    </ModalBody>
+                  </Modal>
+                </Col> */}
               </Row>
               <hr />
               <CardText className="gradient__text" id="description">
