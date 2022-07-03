@@ -20,14 +20,14 @@ This is a mobile responsive frontend focused project intended to delevelop and s
 <br/>
 <div align="center">
 <kbd>
-<img src="./capture.png">
+<img src="./capture.jpg">
 </kbd>
 </div>
 <div align="center">Cart Component: </div>
 <br/>
 <div align="center">
 <kbd>
-<img src="./capture2.png">
+<img src="./capture2.jpg">
 </kbd>
 </div>
 
