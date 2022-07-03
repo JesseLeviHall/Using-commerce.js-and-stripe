@@ -1,6 +1,6 @@
 ## E-Commerce Ceramics Shop "Fired By Ferrari"
 
-A fully fleshed out web shop from landing page to email reciepts and shipment confirmation and tracking info.
+A complete and simple web shop from landing page to email reciepts and shipment confirmation and tracking info.
 
 ## Table of contents
 
