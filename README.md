@@ -5,7 +5,7 @@ A fully fleshed out web shop from landing page to email reciepts and shipment co
 ## Table of contents
 
 - [General info](#general-info)
-- [Live Site](#project-demo)
+- [Live Site](#project-live-site)
 - [Project Video](#project-video)
 - [Technologies](#technologies)
 - [Features](#features)
