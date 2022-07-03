@@ -32,7 +32,7 @@ const Footer = () => {
             <a
               rel="noopener"
               target="_blank"
-              href="https://62c1b4796049b925b9ddadc0--bug-tracker-mern-app.netlify.app/publicform">
+              href="https://62c1be1a7a230426936e3163--bug-tracker-mern-app.netlify.app/publicform">
               Report A Problem
             </a>
           </p>
