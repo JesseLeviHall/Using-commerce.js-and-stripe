@@ -28,6 +28,14 @@ const Footer = () => {
           <p>
             <Link to={"./Cart"}>Cart</Link>
           </p>
+          <p>
+            <a
+              rel="noopener"
+              target="_blank"
+              href="https://62c0d78ff83fa31cadf23390--bug-tracker-mern-app.netlify.app/publicform">
+              Report A Problem
+            </a>
+          </p>
         </div>
         <div className="footer-links_div">
           <h4>Information</h4>
