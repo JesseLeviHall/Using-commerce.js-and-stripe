@@ -1,71 +1,211 @@
-# Getting Started with Create React App
+# Support Ticket Services
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [Deployed](https://support-desk-services.herokuapp.com/)
 
-## Available Scripts
+| Enhanced/Add On | [Original Demo](https://youtu.be/OVEQdZ0eIcg) |                             [Enhanced Demo]() ...coming soon                              |
+| --------------- | :-------------------------------------------: | :---------------------------------------------------------------------------------------: |
+| Enhanced        |                   Basic CSS                   | [TailwindUI](https://tailwindcss.com/docs/installation) & [daisyUI](https://daisyui.com/) |
+| Enhanced        |                   User CRUD                   |                                  User/Admin UX Increased                                  |
+| Enhanced        |                     Auth                      |                                           Auth                                            |
+| Enhanced        |                Submission form                |                             Added format placeholders to form                             |
+| Add On          |                     None                      |                             Email submission on status change                             |
+| Add On          |                     None                      |                                      Admin Dashboard                                      |
+| Add On          |                     None                      |                                     Statistics Chart                                      |
+| Add On          |                     None                      |                                            FAQ                                            |
+| Add On          |                     None                      |                                        Screenshot                                         |
 
-In the project directory, you can run:
+## Intro
 
-### `npm start`
+A (MERN) React Redux Toolkit full stack application with jwt authentication, CRUD operations, protected routes, and NoSQL database. Support Ticket Services application is a customer facing product support system to engage with technicians and solve encountered issues
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [INTRO](#intro)
+- [SMEAC](#smeac)
+- [TECHNOLOGIES](#technologies)
+- [LAUNCH](#launch)
+- [ILLUSTRATIONS](#illustrations)
+- [SCOPE OF FUNCTIONALITIES](#scope-of-functionalities)
+- [EXAMPLE OF USE](#example-of-use)
+- [PROJECT STATUS](#project-status)
+- [SOURCES](#sources)
+- [OTHER INFORMATION](#other-information)
 
-### `npm test`
+## SMEAC
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### (Situation, Mission, Execute, Admin, Comm)
 
-### `npm run build`
+### Situation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the user encounters an issue with a product then it's the support services that will improve the users overall experience. The Support Ticket Services serves as a customer facing open line of communication and product troubleshooting. When a user needs help with product support the user submit's a ticket to Support Ticket Services. A users product experience will help increase revenue and improve company reputation and business relationships.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Mission
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Support Ticket Services role is to solve and report issues within 24 hours, when a product issue is encountered by a user. STS will assist in solving any reported issue hours. Once a ticket is submitted by a user, a staff member will attempt to solve it through product documentation and troubleshooting steps. A staff member and user can create a note on the ticket and close it if solved.
 
-### `npm run eject`
+### Execution
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The user must register and log into Support Ticket Services application and submit a ticket. The user will need to select product item from the dropdown box and write a detailed description of the issue. After a ticket is submitted, a user can post additional notes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The format includes:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Problem Statement
+- Device and Version
+- Browser and Version
+- Reproduction Steps
+- Expected Outcome
+- Actual Outcome
+- Notes
+- Screenshot
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A staff member will see the list of tickets as a "new" and address the issue and create a note on the ticket as they are working through the debugging process. The steps for the staff member to solve the issue are included in this order:
 
-## Learn More
+- Utilize Product Documentation
+- Reproduce The Issue
+- If all resources are exhausted then escalate to jira for dev work
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Admin/Logistics
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application was created on a macOS BigSur version 11.6.5, MacBook Pro 13 inch with Apple M1 chip. The browser is a Google Chrome Version 100.0.4896.127 (Official Build) (arm64)
 
-### Code Splitting
+In order to handle the version control a local and remote repo were used to handle commits and branches during the project.
+Supporting documentation can be found in the [sources](#sources)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## TECHNOLOGIES
 
-### Analyzing the Bundle Size
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- HTML: ReactDOM.Render will pass the Single Page Application through the root element
+- CSS: Styling HTML
+- JavaScript/JSX: Functional Programming Language across the whole application
+- React: UI Library
+- Redux ToolKit: Robust State Management
+- React Dev Tools
 
-### Making a Progressive Web App
+![MERN](./frontend/src/assets/MERN-stack-1.webp)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Backend
 
-### Advanced Configuration
+- Nodejs: Runtime
+- Express: Backend Framework, handles endpoints
+- MongoDB: Database stores collections
+- Mongoose: ODM Object Data Mapper through Express
+- Postman: Ground truthing routes and request/response objects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Version Control
 
-### Deployment
+- Git
+- Github Repo for the remote repository
+  IDE
+- VSCODE with several extensions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## LAUNCH
 
-### `npm run build` fails to minify
+[Deployed](https://support-desk-services.herokuapp.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Using-commercejs-and-stripe
+Support Ticket Services launched on Heroku on 4-29-2022
+
+## ILLUSTRATIONS
+
+### Original Before
+
+Home page
+![ogHome](./frontend/src/assets/ogHome.png)
+
+Login Page
+![ogLogin](./frontend/src/assets/ogLogin.png)
+Register Page
+![ogRegister](./frontend/src/assets/ogRegister.png)
+New Ticket Page
+![ogNewTicket](./frontend/src/assets/ogNewTicket.png)
+View All Of Users Tickets Page
+![ogViewTickets](./frontend/src/assets/ogViewTickets.png)
+View One Ticket Page
+![ogTicket](./frontend/src/assets/ogTicket.png)
+Add A Note
+![ogNote](./frontend/src/assets/ogNote.png)
+
+### AFTER (enhanced)
+
+JSON Web Token
+
+- Once the token is hashed and salted I verified it on [JSON Web Token](https://jwt.io/)
+  ![JWT](./frontend/src/assets/jwt.png)
+- Next to confirm the correct user `id` was encrypted in the token, a cross check in the [MongoDB](https://www.mongodb.com/) `user` collection matched
+  ![User](./frontend/src/assets/db.png)
+
+## SCOPE OF FUNCTIONALITIES
+
+## Features
+
+- Authentication
+- ...
+
+### Authentication
+
+- Registration
+- Login
+- JSON Web Token
+
+### A users functions include:
+
+- Create a ticket
+- View a ticket
+- Create a note
+- View a note
+
+### An admin user will have future enhancements implemented see [Roadmap](#roadmap)
+
+## EXAMPLE OF USE
+
+## PROJECT STATUS
+
+Currently live and [Deployed](https://support-desk-services.herokuapp.com/) to Heroku, fully functional.
+
+The project will undergo several CI/CD improvements and testing in the dev environment, and afterwards pushed to prod via heroku main branch
+
+## ROADMAP
+
+This project will undergo several enhancements to include
+
+- ~~New styling with TailwindUI~~
+- Added UI/UX for Admin/Users
+- Added format placeholders to create a ticket form
+- Adjusted layout
+- Email submission on status change
+- Admin Dashboard
+- Statistics Chart using D3 API
+- FAQ
+- Admin role to include:
+  - Delete a user
+  - Reset a password
+  - Any user ticket history
+- User role add ons:
+  - User can reset password
+  - User can delete account
+  - User history snapshot 45 days
+- Support screenshots
+- TBD
+
+## SOURCES
+
+- [MDN]()
+- [JSON Web Token](https://jwt.io/)
+- [HTML]()
+- [CSS]()
+- [JavaScript]()
+- [React]()
+- [Redux ToolKit]()
+- [Redux]()
+- [Nodejs]()
+- [Express]()
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose]()
+- [Postman]()
+- [Git]()
+- [Github]()
+- [TailwindUI](https://tailwindcss.com/docs/installation)
+- [daisyUI](https://daisyui.com/)
+
+## OTHER INFORMATION
+
