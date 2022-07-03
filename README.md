@@ -169,7 +169,7 @@ function MainComponent() {
 
 - Fully functional e-commerce web application utilizing functional components, hooks, promises and asyncrounous operations.
 - Photo-realistic 3D product model with grab and spin interaction.
-- A multi-step checkout Form using react-hook-form to capture customer information and send order info to Commerce.js
+- A multi-step checkout Form using react-hook-form and custom inputs to capture customer information and send order info to Commerce.js
 - Frontend CSS styles and layout with react-bootstrap.
 - Cart remove/empty functionality and persistence after reload and leave/return for 24 hours.
 - Link for client to report a problem or error to my bug tracker full stack app.
