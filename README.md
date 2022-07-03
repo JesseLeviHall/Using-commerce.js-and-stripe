@@ -180,7 +180,7 @@ The project is deployed and in use by the creator. Public may use repo as needed
 
 ## Inspiration
 
-An appreciation for the artist who creates the ceramics inspired the idea for this site. I also intended to challenge myself as a new developer and gain familiarity with popular modern technologies such as CMS platforms, Stripe, and 3d modeling.
+An appreciation for the artist who creates the ceramics inspired the idea for this site. I also intended to challenge myself as a new developer and gain familiarity with popular modern technologies such as CMS platforms, Stripe, and 3D modeling.
 
 ## Contact
 
